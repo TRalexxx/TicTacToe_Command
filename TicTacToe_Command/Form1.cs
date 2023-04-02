@@ -12,8 +12,8 @@ namespace TicTacToe_Command
 {
     public partial class Form1 : Form
     {
-        private int posX = 30;
-        private int posY = 30;
+        private int posX = 10;
+        private int posY = 10;
         private int flag = 0;
         public Form1()
         {
@@ -25,9 +25,9 @@ namespace TicTacToe_Command
         { 
             if(flag > 0)
             {
-                for (int f = 10; f > 1; f--)
+                for (int f = 8; f >= 0; f--)
                 {
-                    this.Controls.RemoveAt(f);
+                   panel.Controls.RemoveAt(f);
                 }
             }
             
@@ -45,9 +45,10 @@ namespace TicTacToe_Command
                     btn.Location = new Point(x, y);
                     btn.Font = new Font("Ubuntu", 60);
                     btn.Click += Btn_Click;
-                    this.Controls.Add(btn);
+                    panel.Controls.Add(btn);
                 }
-            }   
+            }
+            
         }
         //ставит Х или О при нажатии на кнопку
         private void Btn_Click(object sender, EventArgs e)

@@ -53,9 +53,6 @@ namespace TicTacToe_Command
 
             //Поле для вывода результата игры. Будет создаватся в результате победы одного из игроков
             info = new Label();
-            // При создании логики удалить. Выводить информацию при победе
-            info.Text = "Information about game. I'm here";
-            //
 
             info.Location = new Point(500, 50);
             info.Font = new Font("Ubuntu", 18, FontStyle.Bold);
